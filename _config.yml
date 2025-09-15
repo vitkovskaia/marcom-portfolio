@@ -1,0 +1,9 @@
+title: "Kaia Vitkovskaia — Portfolio"
+description: "SEA, marketing ops, analytics-driven growth."
+collections:
+  projects:
+    output: true
+    permalink: /projects/:slug/
+defaults:
+  - scope: { path: "", type: "projects" }
+    values: { layout: project }
