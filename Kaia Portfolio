@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaia Vitkovskaia – Portfolio</title>
+  <meta name="description" content="Portfolio landing page for Kaia Vitkovskaia – marketing professional and aspiring freelancer." />
+  <style>
+    :root{
+      /* Brand palette (provided) */
+      --accent:#ffc300; /* ~10% usage */
+      --primary:#5b7b7a; /* ~30% usage */
+      --bg:#f5f5f5;      /* ~60% usage */
+      --bonus:#334C60;   /* tiny highlights */
+      --text:#2C2C2C;
+
+      --radius:16px;
+      --shadow:0 8px 24px rgba(0,0,0,.08);
+      --maxw:1100px;
+    }
+    /* Reset */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:var(--bonus);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Layout helpers */
+    .container{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+    .btn{display:inline-block; padding:12px 18px; border-radius:999px; font-weight:600; letter-spacing:.2px}
+    .btn-primary{background:var(--accent); color:#1b1b1b; box-shadow:var(--shadow)}
+    .btn-primary:hover{filter:brightness(0.95)}
+    .btn-ghost{border:2px solid var(--primary); color:var(--primary)}
+    .btn-ghost:hover{background:rgba(91,123,122,.08)}
+
+    /* Header & Nav */
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter:saturate(180%) blur(10px);
+      background:rgba(245,245,245,.85);
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .logo{font-weight:800; letter-spacing:.5px}
+    .logo b{color:var(--bonus)}
+    nav ul{list-style:none; display:flex; gap:18px; padding:0; margin:0}
+    nav a{font-weight:600}
+
+    /* Hero */
+    .hero{padding:64px 0 32px}
+    .hero-inner{display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:center}
+    .tag{display:inline-flex; align-items:center; gap:8px; font-size:.9rem; padding:6px 10px; border-radius:999px; background:#fff; border:1px solid rgba(0,0,0,.06)}
+    .tag .dot{width:8px; height:8px; border-radius:50%; background:var(--accent)}
+    h1{font-size:clamp(32px, 4.4vw, 54px); line-height:1.15; margin:12px 0}
+    .sub{font-size:1.05rem; color:#4a4a4a; max-width:60ch}
+    .cta{display:flex; gap:12px; margin-top:24px; flex-wrap:wrap}
+    .hero-card{
+      background:linear-gradient(180deg,#ffffff, #f9fbfb);
+      border:1px solid rgba(0,0,0,.06);
+      border-radius:var(--radius);
+      min-height:260px; display:flex; align-items:center; justify-content:center;
+      color:#6a6a6a; box-shadow:var(--shadow);
+    }
+    .hero-note{font-size:.9rem; color:#666; margin-top:8px}
+
+    /* Sections */
+    section{padding:56px 0}
+    .section-title{font-size:1.6rem; margin-bottom:16px}
+
+    /* Skills */
+    .chips{display:flex; gap:10px; flex-wrap:wrap}
+    .chip{background:#fff; border:1px solid rgba(0,0,0,.06); padding:10px 14px; border-radius:999px; font-weight:600}
+    .chip strong{color:var(--primary)}
+
+    /* Cards row */
+    .row{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .card{background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow)}
+    .card h3{margin:6px 0 8px; font-size:1.05rem}
+    .card p{margin:0; color:#555}
+    .card a{font-weight:700}
+
+    /* Contact */
+    .contact-box{background:var(--primary); color:#fff; border-radius:var(--radius); padding:24px; display:flex; align-items:center; justify-content:space-between; gap:18px}
+    .contact-box p{margin:0; opacity:.95}
+    .contact-actions{display:flex; gap:10px; flex-wrap:wrap}
+
+    /* Footer */
+    footer{padding:28px 0; color:#666}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-inner{grid-template-columns:1fr}
+      .row{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Kaia <b>Vitkovskaia</b></div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="tag"><span class="dot"></span><span>Portfolio & Freelance</span></div>
+          <h1>Kaia Vitkovskaia</h1>
+          <p class="sub">{/* Value proposition placeholder */} I help brands grow with thoughtful performance marketing, clean analytics, and content that converts. <em>(Edit this line later with your final value prop.)</em></p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact">Get in Touch</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/your-link" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <p class="hero-note">Colors: <span style="color:var(--accent)">accent</span> • <span style="color:var(--primary)">primary</span> • <span style="color:var(--bonus)">bonus</span></p>
+        </div>
+        <div class="hero-card" aria-label="Hero image placeholder">
+          <span>Hero photo goes here</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p style="max-width:70ch">{/* About placeholder */} Short professional bio goes here (3–5 sentences). What you do, your strengths (e.g., Google Ads, GA4, SEO with Semrush), and what you’re looking for. Keep it confident but friendly.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="chips" aria-label="Skill tags">
+          <span class="chip"><strong>Google Ads</strong></span>
+          <span class="chip"><strong>GA4</strong></span>
+          <span class="chip"><strong>SEO</strong> (Semrush)</span>
+          <span class="chip">Content Creation</span>
+          <span class="chip">A/B Testing</span>
+          <span class="chip">Looker Studio</span>
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">EN • RU • NL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK LINKS to separate pages -->
+    <section>
+      <div class="container">
+        <div class="row" role="list">
+          <article class="card" role="listitem">
+            <h3>Projects</h3>
+            <p>Selected case studies with outcomes and what I did.</p>
+            <p><a href="projects.html">View projects →</a></p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Certificates</h3>
+            <p>Google Ads and other credentials proving my skills.</p>
+            <p><a href="certificates.html">See certificates →</a></p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Testimonials</h3>
+            <p>What teams and managers say about working with me.</p>
+            <p><a href="testimonials.html">Read testimonials →</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title">Contact</h2>
+        <div class="contact-box">
+          <p>
+            Ready to collaborate? Get in touch for projects or freelance work.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:hello@example.com">Email Me</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/your-link" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Kaia Vitkovskaia. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Smooth anchor scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id=a.getAttribute('href');
+        const el=document.querySelector(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
